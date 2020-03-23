@@ -28,7 +28,7 @@ p{
 
 .rect{
    background-color: rgb(229, 237, 240); 
-   height: 368px;
+   height: auto;
    color: rgb(122, 118, 111);
 }
 
