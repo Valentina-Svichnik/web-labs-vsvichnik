@@ -1,0 +1,172 @@
+@media (max-width: 870px){
+    .header h1{
+        text-align: center;
+    }
+
+    .h3{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .element{
+        width: 320px;
+    }
+    
+    .dropdown{
+        position: relative;
+
+    }
+    
+    .dropdown-label{
+        padding: 1em 1.5em;
+        border: 1ps solid black;
+        cursor: pointer;
+        display: block;
+    }
+    
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 2em;
+        min-width: 50%;
+        background-color: white;
+        width: 320px;
+        z-index: 5;
+    
+    }
+    
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    
+    .submenu{
+        padding: 0px;
+        margin: 0;
+    }
+    
+    .submenu > .element + .element{
+        border: 1px solid white;
+    }
+    .submenu > .element > a{
+        display: block;
+        padding: 1.5em 1.5em;
+        background: #F9F9FC;
+        color: black;
+        text-decoration: none;
+        width: 300px;
+        margin-top: 15px;
+    }
+    
+    .submenu > .element > a:hover{
+        background-color: #fff;
+    }
+    
+    .hidden{
+        display: block;
+    }
+
+     /* ******************************************************** */
+ 
+     .submenu{
+        flex-direction: column;
+     }
+
+     .pic h3{
+        font-size: 30px;
+     }
+
+     .pic{
+        height: auto;
+        width: 100%;
+        /* margin: -20px 0 0 -20px; */
+     }
+     
+     body{
+         margin-left: 0;
+         margin-right: 0;
+     }
+     .pic p{
+         margin-bottom: 10px;
+     }
+
+     .container{
+         flex-direction: column;
+         padding: 10px;
+     }
+
+     .container1{
+         width: 100%;
+         justify-content: center;
+     }
+
+     .container12{
+         margin-top: 20px;
+         box-sizing: border-box;
+     }
+
+     .cont121 h4{
+         font-size: 12px;
+     }
+
+    .container13{
+        flex-direction: column;
+    }
+
+    .container131{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container131 img{
+        width: 100%;
+        background-size: cover;
+        /* margin-left: 10px; */
+    }
+
+    .container15{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container15 p{
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-size: contain;
+    }
+
+    .container2{
+        width: 100%;
+    }
+
+    .container21, .container22, .container23{
+        height: 310px;
+        padding: 20px 65px 20px 65px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .container15 .button{
+        padding-left: 25px;
+    }
+
+    .oneline{
+        padding: 10px;
+    }
+
+
+    .slider{
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .slider1, .slider2, .slider3, .slider4{
+        width: 100%;
+    }
+
+    footer{
+        display: none;
+    }
+}
