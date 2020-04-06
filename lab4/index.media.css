@@ -1,0 +1,50 @@
+@media (max-width: 870px){
+    .dropdown{
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropdown-label{
+        display: block;
+        /* background-color: coral; */
+        width: 50px;
+        height: 50px;
+        /* cursor: pointer; */
+    }
+
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 2em;
+        min-width: 100%;
+        background-color: yellow;
+        width: 120px;
+    
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+    
+    .submenu{
+        padding: 10px;
+        margin: 0;
+        /* list-style-type: none; */
+        border: 2px solid red;
+    }
+    
+    .submenu > .element + .element{
+        border: 1px solid white;
+    }
+    .submenu > .element > a{
+        display: block;
+        padding: 0.4em 1.5em;
+        background-color: burlywood;
+        color: cadetblue;
+        text-decoration: none;
+    }
+    
+    .submenu > .element > a:hover{
+        background-color: #fff;
+    }
+}
