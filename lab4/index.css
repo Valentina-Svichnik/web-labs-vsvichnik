@@ -2,16 +2,15 @@
     box-sizing: border-box;
 }
 /* HEADER */
-.cont{
-  display: flex;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
-}
 
 .icon{
     height: 3px;
     width: auto;
+}
+
+.cross{
+    border: none;
+    background-color: white;
 }
 
 header h1, footer h1{
@@ -46,6 +45,8 @@ h3, h4{
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    justify-content: space-between;
 
 }
 
@@ -54,7 +55,7 @@ h3, h4{
 }
 
 .pic{
-    background: url(img/hotel.jpg) no-repeat -80px 0;
+    background: url(img/hotel.jpg) no-repeat 0px 0;
     height: 500px;
     width: 100%;
     display: flex;
@@ -62,6 +63,8 @@ h3, h4{
     justify-content: space-around;
     padding: 40px;
     align-items: center;
+    /* background-size: cover; */
+    background-position: 50% 50%
 }
 
 .new{
@@ -104,14 +107,31 @@ h3, h4{
     color: #FFFFFF;
 }
 
+.element{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}
+
+.h{
+    opacity: 0;
+}
+
+
 /* НАВИГАЦИОННОЕ МЕНЮ */
 .submenu{
     display: flex;
     justify-content: space-around;
+    z-index: 100;
 }
 
 .dropdown-label{
     display: none;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -264,12 +284,16 @@ h3, h4{
 
 .container15{
     background: url(img/balerina.png) no-repeat;
-    width: 770px;
+    width: 100%;
     height: 176px;
     align-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container15 .button{
+    padding-left: 25px;
 }
 
 .container15 p{
@@ -327,7 +351,7 @@ h3, h4{
     background-color: black;
     opacity: 0.5;
     padding: 10px 0 10px 0;
-    text-align: center;
+    align-self: center;
  }
 
  .button strong{
@@ -353,6 +377,7 @@ h3, h4{
 .glide .button{
     border: 2px solid white;
     opacity: 0;
+    text-align: center;
 }
 
 .glide p{

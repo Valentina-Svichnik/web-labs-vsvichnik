@@ -16,27 +16,27 @@
 <body>
     
 <header>
-    <h1>Новости культуры</h1>
-    <div class="cont">
-        <nav style="width: 100%;">
+        <nav  style="width: 100%;">
             <div class="dropdown">
                 <div class="dropdown-label"><div class='icon'>_</div><div class='icon'>_</div><div class='icon'>_</div></div>
+                <h1 style="text-align: center;">Новости культуры</h1>
                 <div class="dropdown-menu">
                     <div class="submenu">
+                        <div class="element"><div class="h">.</div><button class="cross hidden"><img src="img/cross.png" alt="#" width="30px" height="30px"></button></div>
                         <div class="element"><a href="#">новости</a></div>
-                        <div class="element"><a href="#">обзоры</a></div>
-                        <div class="element"><a href="#">музыка</a></div>
-                        <div class="element"><a href="#">архитектура</a></div>
-                        <div class="element"><a href="#">кино</a></div>
-                        <div class="element"><a href="#">театр</a></div>
-                        <div class="element"><a href="#">литература</a></div>
+                        <div class="element"><a href="#">обзоры </a></div>
+                        <div class="element"><a href="#">музыка </a></div>
+                        <div class="element"><a href="#">архитектура </a></div>
+                        <div class="element"><a href="#">кино </a></div>
+                        <div class="element"><a href="#">театр </a></div>
+                        <div class="element"><a href="#">литература </a></div>
                         <div class="element"><a href="#">религия</a></div>
-                        <div class="element"><a href="#">живопись</a></div>
+                        <div class="element"><a href="#">живопись </a></div>
                     </div>
                 </div>
             </div>
         </nav>
-    </div>
+    
 
 
     <div class="glide1">
@@ -45,7 +45,7 @@
             <li class="glide__slide">
                 <div class="pic">
                     <div class="new">НОВОЕ</div>
-                    <h3>ПОДВОДНЫЙ ОТЕЛЬ</h1>
+                    <h3>ПОДВОДНЫЙ ОТЕЛЬ</h3>
                     <p>Как известно, Дубай – город контрастов. Самые революционные <br>
                         и фантастические мечты архитекторов способен воплотить в жизнь <br> этот мегаполис, построенный на нефти и за счет нефти</p>
                 </div>
@@ -65,7 +65,7 @@
     <section>
       <div class="container">
           <div class="container1">
-            <div class="element zag oneline">НОВОСТИ</div>
+            <div class="element zag oneline" style="margin: 0;">НОВОСТИ</div>
             <br>
             <div class="container11">
                 <div class="cont11">
@@ -228,15 +228,16 @@
         }
     }
     new Glide('.glide', config).mount();
-  </script>
-  
-  <script>
-    const config = {
+
+    const config1 = {
         type: 'carousel',
         perView: 1
     }
-    new Glide('.glide1', config).mount();
+    new Glide('.glide1', config1).mount();
   </script>
+  
+  
+ 
 </body>  
 
 </html>
