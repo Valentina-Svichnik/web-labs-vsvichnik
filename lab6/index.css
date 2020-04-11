@@ -1,0 +1,457 @@
+html body{
+    margin: 0;
+    padding: 0;
+}
+
+.probel{
+    width: 100%;
+    height: 100px;
+}
+
+.container{
+    width: 100%;
+    background: url(img/fon.jpg) no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.fish-left{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.oval{
+    position: absolute;
+    width: 180px;
+	height: 80px;
+	background: yellow;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    z-index: 10;
+    left: 1080px;
+
+    animation-name: swim-left-oval;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.triangle-left{
+    position: absolute;
+    left: 1240px;
+    width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-right: 80px solid orange;
+    border-bottom: 40px solid transparent;
+    
+    animation-name: swim-left-triangle;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.eye-left{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: black;
+    z-index: 20;
+    position: absolute;
+    top: 125px;
+    left: 1110px;
+
+    animation-name: swim-left-eye;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.fish-right{
+    display: flex;
+    justify-content: start;
+}
+
+.oval-right{
+    position: absolute;
+    width: 180px;
+	height: 80px;
+	background: yellow;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    z-index: 10;
+    left: 0;
+    top: 290px;
+
+
+    animation-name: swim-right-oval;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.triangle-right{
+    position: absolute;
+    left: -60px;
+    top: 290px;
+    width: 0;
+	height: 0;
+	border-top: 40px solid transparent;
+	border-left: 80px solid orange;
+    border-bottom: 40px solid transparent;
+    
+    animation-name: swim-right-triangle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.eye-right{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: black;
+    z-index: 20;
+    position: absolute;
+    top: 310px;
+    left: 140px;
+
+    animation-name: swim-right-eye;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.smallfish-right{
+    display: flex;
+    justify-content: start;
+}
+
+.sm-oval-right{
+    position: absolute;
+    width: 80px;
+	height: 40px;
+	background: yellow;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    z-index: 10;
+    left: 0;
+    top: 190px;
+
+
+    animation-name: swim-right-oval-sm;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.sm-triangle-right{
+    position: absolute;
+    left: -30px;
+    top: 190px;
+    width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 40px solid orange;
+    border-bottom: 20px solid transparent;
+    
+    animation-name: swim-right-triangle-sm;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.sm-eye-right{
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    background: black;
+    z-index: 20;
+    position: absolute;
+    top: 200px;
+    left: 60px;
+
+    animation-name: swim-right-eye-sm;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+
+.smallfish-left{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sm-oval-left{
+    position: absolute;
+    width: 80px;
+	height: 40px;
+	background: yellow;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    z-index: 10;
+    top: 390px;
+    left: 1180px;
+
+    animation-name: swim-left-oval-sm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.sm-triangle-left{
+    position: absolute;
+    left: 1250px;
+    top: 390px;
+    width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 40px solid orange;
+    border-bottom: 20px solid transparent;
+    
+    animation-name: swim-left-triangle-sm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.sm-eye-left{
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    background: black;
+    z-index: 20;
+    position: absolute;
+    top: 400px;
+    left: 1200px;
+
+    animation-name: swim-left-eye-sm;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.bubble1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 79, 250);
+    background-color: rgb(121, 191, 248);
+    opacity: 0.5;
+
+    position: absolute;
+    top: 640px;
+    left: 340px;
+    z-index: 0;
+
+    animation-name: bubble1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.bubble2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 79, 250);
+    background-color: rgb(121, 191, 248);
+    opacity: 0.5;
+
+    position: absolute;
+    top: 640px;
+    left: 140px;
+    z-index: 0;
+
+    animation-name: bubble1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.bubble3{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 79, 250);
+    background-color: rgb(121, 191, 248);
+    opacity: 0.5;
+
+    position: absolute;
+    top: 740px;
+    left: 440px;
+    z-index: 0;
+
+    animation-name: bubble1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.bubble4{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 79, 250);
+    background-color: rgb(121, 191, 248);
+    opacity: 0.5;
+
+    position: absolute;
+    top: 640px;
+    left: 840px;
+    z-index: 0;
+
+    animation-name: bubble1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.bubble5{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 5px solid rgb(0, 79, 250);
+    background-color: rgb(121, 191, 248);
+    opacity: 0.5;
+
+    position: absolute;
+    top: 640px;
+    left: 1140px;
+    z-index: 0;
+
+    animation-name: bubble1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.star-find{
+    
+}
+
+/* ************************BUBBLE1********************************** */
+@keyframes bubble1{
+    0% {
+        top: 640px;
+    }
+
+    100% {
+         top: -50px;
+    }
+}
+
+
+/* ************************FISH LEFT********************************** */
+@keyframes swim-left-oval{
+    0% {
+        left: 1080px;
+    }
+
+    100% {
+         left: -250px;
+    }
+}
+
+@keyframes swim-left-triangle{
+    0% {
+        left: 1240px;
+    }
+
+    100% {
+         left: -90px;
+    }
+}
+
+@keyframes swim-left-eye{
+    0% {
+        left: 1110px;
+    }
+
+    100% {
+         left: -220px;
+    }
+}
+
+
+
+/* ************************FISH RIGHT********************************** */
+@keyframes swim-right-oval{
+    0% {
+        left: 0;
+    }
+
+    100% {
+         left: 1300px;
+    }
+}
+
+@keyframes swim-right-triangle{
+    0% {
+        left: -60px;
+    }
+
+    100% {
+         left: 1260px;
+    }
+}
+
+@keyframes swim-right-eye{
+    0% {
+        left: 140px;
+    }
+
+    100% {
+         left: 1440px;
+    }
+}
+
+/* ************************SMALL FISH RIGHT********************************** */
+@keyframes swim-right-oval-sm{
+    0% {
+        left: 0;
+    }
+
+    100% {
+         left: 1300px;
+    }
+}
+
+@keyframes swim-right-triangle-sm{
+    0% {
+        left: -30px;
+    }
+
+    100% {
+         left: 1270px;
+    }
+}
+
+@keyframes swim-right-eye-sm{
+    0% {
+        left: 60px;
+    }
+
+    100% {
+         left: 1360px;
+    }
+}
+
+/* ************************SMALL FISH LEFT********************************** */
+@keyframes swim-left-oval-sm{
+    0% {
+        left: 1180px;
+    }
+
+    100% {
+         left: -250px;
+    }
+}
+
+@keyframes swim-left-triangle-sm{
+    0% {
+        left: 1250px;
+    }
+
+    100% {
+         left: -180px;
+    }
+}
+
+@keyframes swim-left-eye-sm{
+    0% {
+        left: 1200px;
+    }
+
+    100% {
+         left: -250px;
+    }
+}
