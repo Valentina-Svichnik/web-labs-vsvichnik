@@ -329,7 +329,7 @@ html body{
 .question{
     width: 150px; 
     height: 80px; 
-    padding: 30px;
+    padding: 25px;
     box-sizing: border-box;
     margin-left: 26px;
     background: rgb(12, 58, 102);
@@ -354,10 +354,21 @@ html body{
     width: 200px;
     transition-duration: .5s;
     transition-delay: .2s;
-    box-shadow: 2px black;
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
 }
 
 
+.plant{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+    top: 500px;
+}
+
+/* .plant:hover{
+    display: none;
+} */
 
 
 /* *************************STAR******************************* */
@@ -366,8 +377,14 @@ html body{
         transform: rotate(0deg);
     }
 
-    100% {
+    50% {
         transform: rotate(360deg);
+        top: 400px;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        top: 500px;
     }
 }
 
