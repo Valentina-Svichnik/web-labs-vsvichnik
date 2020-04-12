@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: bold;
+    background-color: rgb(238, 218, 194);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.head-container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    background-color: rgb(39, 199, 199);
+}
+
+img{
+    width: 100px;
+    height: auto;
+}
+
+h1{
+    margin: 0 5em;
+    font-weight: bold;
+    color: white;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-container{
+    display: flex;
+    padding: 30px 50px;
+    flex-direction: column;
+    background-color: burlywood;
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    
+
+    margin-top: 2em;
+}
+
+.row{
+    display: flex;
+}
+
+.container1, .container2, .container3{
+    display: flex;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.container1{
+    flex: 3;
+    font-display: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container2{
+    flex: 1;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container3{
+    flex: 2;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+
+.element{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: crimson;
+    margin: 5px 0;
+}
+
+.bigone, .bigtwo, .bigthree{
+    flex-direction: row;
+}
+
+.bigtwo{
+    margin: auto;
+}
+
+.bigone .one{
+    order: 1;
+}
+
+.bigone .five{
+    order: -1;
+}
+
+.bigtwo .three{
+    order: 1;
+}
+
+.bigthree .one{
+    order: 3;
+}
+
+.bigthree .two{
+    order: 1;
+}
+
+.bigthree .three{
+    order: 5;
+}
+
+.bigthree .four{
+    order: 4;
+}
+
+.bigthree .five{
+    order: 2;
+}
+
