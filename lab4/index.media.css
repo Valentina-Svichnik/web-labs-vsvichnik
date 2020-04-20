@@ -1,4 +1,30 @@
-@media (max-width: 870px){
+@media (max-width: 1190px){
+    .container{
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .container11{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .cont1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .element .zag .oneline .hidden1{
+        display: block;
+    }
+
+
+}
+
+
+@media (max-width: 920px){
     .header h1{
         text-align: center;
     }
@@ -128,6 +154,7 @@
     .container15{
         width: 100%;
         flex-direction: column;
+        background-size: cover;
     }
 
     .container15 p{
@@ -139,6 +166,7 @@
 
     .container2{
         width: 100%;
+        margin: 0;
     }
 
     .container21, .container22, .container23{
