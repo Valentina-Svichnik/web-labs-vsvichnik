@@ -13,9 +13,6 @@ body{
                                 для картинки, не для блока!*/
 }
 
-header h1{
-    display: none;
-}
 
 h1{
     text-align: center;   
@@ -157,16 +154,12 @@ footer nav a:hover{
 }
 
 @media print{
-    @page:first{
+    @page:{
         margin: 2cm;
     }
 
-    header h1{
-        display: block;
-    }
-
     .logo{
-        display: none;
+        filter: invert(1);
     }
 
     .topnav{
@@ -186,6 +179,15 @@ footer nav a:hover{
     h1{
         text-align: left;
     }
+
+    h2{
+        margin-bottom: 0;
+    }
+
+    p{
+        margin-top: 0;
+    }
+
 
     .advantages-container{
         justify-content: start;
