@@ -66,6 +66,7 @@ nav a:hover{
 
 .sport p{
     align-self: center;
+    font-size: 20px;
 }
 
 /* ****************************** */
@@ -99,6 +100,7 @@ nav a:hover{
 .block p{
     align-self: center;
     width: 90%;
+    font-size: 20px;
 }
 
 /* ************************* */
@@ -117,6 +119,7 @@ nav a:hover{
 .container-three p{
     color: #263172;
     padding-bottom: 20px;    
+    font-size: 20px;
 }
 
 .cards{
@@ -171,12 +174,13 @@ nav a:hover{
 
 button{
     width: 40%;
-    height: 40px;
+    height: 45px;
     
     border-radius: 20px;
     background-color: none;
     color: #6ebfee;
     border: none;
+    font-size: 18px;
 }
 
 button:hover{
@@ -230,7 +234,7 @@ button:hover{
     background-color: rgb(233, 232, 232);
     border: none;
     color: #263172;
-    font-size: medium;
+    font-size: 20px;
 }
 
 .btn:hover{

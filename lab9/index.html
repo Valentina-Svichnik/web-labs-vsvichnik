@@ -8,29 +8,29 @@
     <title>LET'S FLY!</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <header role="banner">
+        <nav role="navigation">
             <div class="logo"><img src="img/logo_parashut.png" alt="logo" width="50" height="50"></div>
             <div class="menu">
-                <a href="">ГЛАВНАЯ</a>
-                <a href="">ОНЛАЙН-ЗАПИСЬ</a>
-                <a href="">ПЛАНЫ И ЦЕЛИ</a>
+                <a href="#">ГЛАВНАЯ</a>
+                <a href="#">ОНЛАЙН-ЗАПИСЬ</a>
+                <a href="#">ПЛАНЫ И ЦЕЛИ</a>
             </div>
         </nav>
     </header>
 
-    <section>
+    <aside role="complementary">
         <div class="container-preview">
             <div class="sport">
                 <h1>LET'S FLY! <br> к Вашим услугам</h1>
                 <p>Спорт - наше все!</p>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <section>
+    <aside role="complementary">
         <div class="container-about">
-            <img src="img/1.jpg" alt="beautiful">
+            <img src="img/1.jpg" alt="beautiful mountain">
             <div class="block">
                 <p>В свое время в г. Москва не так легко было найти спорткомплекс, 
                     где можно прыгнуть с парашютом, а перед этим позаниматься, поплавать, сходить на 
@@ -39,9 +39,9 @@
                     здорового образа жизни.</p>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <section>
+    <aside role="complementary">
         <div class="container-three">
             <h1>СПОРТИВНЫЕ ОБЪЕКТЫ</h1>
             <p>Подготовься к прыжку в наших спортиных объектах!</p>
@@ -94,22 +94,22 @@
                 </div>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <section>
+    <footer role="contentinfo">
         <div class="contacts">
             <h1>СВЯЖИТЕСЬ С НАМИ</h1>
             <div class="form">
                 <p>Имя</p>
-                <input type="text" class="small" placeholder="Имя">
+                <input type="text" class="small" placeholder="Имя" tabindex="1">
                 <p>Почта</p>
-                <input type="email" class="small" placeholder="Почта">
+                <input type="email" class="small" placeholder="Почта" tabindex="2">
                 <p>Тема вопроса</p>
-                <input type="text" class="big" placeholder="Тема"> <br>
-                <input type="text" class="large" placeholder="Добавьте сообщение..."> <br>
+                <input type="text" class="big" placeholder="Тема" tabindex="3"> <br>
+                <input type="text" class="large" placeholder="Добавьте сообщение..." tabindex="4"> <br>
                 <input type="submit" value="Отправить" class="btn">
             </div>
         </div>
-    </section>
+    </footer>
 </body>
 </html>
