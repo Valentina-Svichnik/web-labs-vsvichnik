@@ -66,6 +66,10 @@ nav a:hover{
 
 .sport p{
     align-self: center;
+<<<<<<< HEAD
+=======
+    font-size: 20px;
+>>>>>>> lab9
 }
 
 /* ****************************** */
@@ -96,9 +100,16 @@ nav a:hover{
     align-self: center;
 }
 
+<<<<<<< HEAD
 .block p{
     align-self: center;
     width: 90%;
+=======
+.block article{
+    align-self: center;
+    width: 90%;
+    font-size: 20px;
+>>>>>>> lab9
 }
 
 /* ************************* */
@@ -117,6 +128,10 @@ nav a:hover{
 .container-three p{
     color: #263172;
     padding-bottom: 20px;    
+<<<<<<< HEAD
+=======
+    font-size: 20px;
+>>>>>>> lab9
 }
 
 .cards{
@@ -145,7 +160,11 @@ nav a:hover{
     padding-bottom: 50px;
 }
 
+<<<<<<< HEAD
 .text p{
+=======
+.text article{
+>>>>>>> lab9
     width: 85%;
     text-align: center;
     justify-content: space-around;
@@ -155,7 +174,11 @@ nav a:hover{
     background-color: #263172;
 }
 
+<<<<<<< HEAD
 .one p{
+=======
+.one article{
+>>>>>>> lab9
     color: #6ebfee;
 }
 
@@ -171,18 +194,28 @@ nav a:hover{
 
 button{
     width: 40%;
+<<<<<<< HEAD
     height: 40px;
+=======
+    height: 45px;
+>>>>>>> lab9
     
     border-radius: 20px;
     background-color: none;
     color: #6ebfee;
     border: none;
+<<<<<<< HEAD
+=======
+    font-size: 18px;
+    margin-top: 30px;
+>>>>>>> lab9
 }
 
 button:hover{
     background-color: white;
 }
 
+<<<<<<< HEAD
 /* ********************* */
 .contacts{
     display: flex;
@@ -207,6 +240,68 @@ button:hover{
     height: 100px;
 }
 
+=======
+.contacts{
+    height: фгещ;
+    padding: 50px;
+    background-color: #4f89aa;
+    margin-top: 50px;
+    font-size: xx-large;
+    color: white;
+}
+
+.form p{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.small{
+    height: 30px;
+    width: 45%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: #4f89aa;
+}
+
+.big{
+    height: 30px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: #4f89aa;
+}
+
+.large{
+    height: 130px;
+    width: 90%;
+    margin-bottom: 10px;
+    background-color: #4f89aa;
+    border: 1px solid white;
+}
+
+.btn{
+    height: 50px;
+    width: 90%;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    color: #263172;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: #96cceb;
+    color: white;
+}
+
+input:hover{
+    border: 1px solid white;
+}
+
+
+>>>>>>> lab9
 
 
 
