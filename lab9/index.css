@@ -183,6 +183,66 @@ button:hover{
     background-color: white;
 }
 
+.contacts{
+    height: фгещ;
+    padding: 50px;
+    background-color: #4f89aa;
+    margin-top: 50px;
+    font-size: xx-large;
+    color: white;
+}
+
+.form p{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.small{
+    height: 30px;
+    width: 45%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: #4f89aa;
+}
+
+.big{
+    height: 30px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: #4f89aa;
+}
+
+.large{
+    height: 130px;
+    width: 90%;
+    margin-bottom: 10px;
+    background-color: #4f89aa;
+    border: 1px solid white;
+}
+
+.btn{
+    height: 50px;
+    width: 90%;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    color: #263172;
+    font-size: medium;
+}
+
+.btn:hover{
+    background-color: #96cceb;
+    color: white;
+}
+
+input:hover{
+    border: 1px solid white;
+}
+
+
 
 
 
