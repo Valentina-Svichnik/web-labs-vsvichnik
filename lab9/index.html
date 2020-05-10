@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,9 @@
         <nav role="navigation">
             <div class="logo"><img src="img/logo_parashut.png" alt="logo" width="50" height="50"></div>
             <div class="menu">
-                <a href="#" tabindex="1">ГЛАВНАЯ</a>
-                <a href="#" tabindex="2">ОНЛАЙН-ЗАПИСЬ</a>
-                <a href="#" tabindex="3">ПЛАНЫ И ЦЕЛИ</a>
+                <a href="#" tabindex="1" role="link">ГЛАВНАЯ</a>
+                <a href="#" tabindex="2" role="link">ОНЛАЙН-ЗАПИСЬ</a>
+                <a href="#" tabindex="3" role="link">ПЛАНЫ И ЦЕЛИ</a>
             </div>
         </nav>
     </header>
@@ -28,7 +28,7 @@
         </div>
     </aside>
 
-    <main role="main" tabindex="5">
+    <aside role="note" tabindex="5">
         <div class="container-about">
             <img src="img/1.jpg" alt="beautiful mountain">
             <div class="block">
@@ -39,7 +39,7 @@
                     здорового образа жизни.</article>
             </div>
         </div>
-    </main>
+    </aside>
 
     <main role="main"  tabindex="6">
         <div class="container-three">
@@ -96,7 +96,7 @@
         </div>
     </main>
 
-    <footer role="contentinfo" tabindex="10">
+    <aside tabindex="10" role="complementary">
         <div class="contacts">
             <h1>СВЯЖИТЕСЬ С НАМИ</h1>
             <div class="form">
@@ -110,6 +110,10 @@
                 <input type="submit" value="Отправить" class="btn">
             </div>
         </div>
+    </aside>
+
+    <footer role="contentinfo" tabindex="14">
+        <p>2020, Let's fly!</p>		
     </footer>
 </body>
 </html>
