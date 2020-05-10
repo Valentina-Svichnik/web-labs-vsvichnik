@@ -9,7 +9,7 @@ html, body{
 
 nav{
     @include flex(space-around, center);
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
     height: 120px;
 
     .logo{
@@ -31,9 +31,11 @@ nav{
 a{
     text-decoration: none;
     color: white;
+    padding: 10px;
 
     &:hover{
         color: $yellowbg;
+        background-color: darken(map-get($blueColors, lightblueBG), $amount: 5);
         border-bottom: 1px solid $yellowbg;
     }
 }
@@ -88,7 +90,7 @@ a{
 .block{
     width: 40%;
     text-align: center;
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
     color: white;
     height: 400px;
 
@@ -110,12 +112,12 @@ a{
     flex-direction: column;
 
     h1{
-        color: $lightblueBG;
+        color: map-get($blueColors, lightblueBG);
         font-size: xx-large;
     }
 
     p{
-        color: $blueBG;
+        color: map-get($blueColors, blueBG);
         padding-bottom: 20px;    
         font-size: 20px;
     }
@@ -153,23 +155,23 @@ a{
 
 .one{
     @extend .card;
-    background-color: $blueBG;
+    background-color: map-get($blueColors, blueBG);
 
     article{
-        color: $lightblueBG;
+        color: map-get($blueColors, lightblueBG);
     }
 }
 
 .two{
     @extend .card;
-    background-color: $lightblueBG;
-    color: $blueBG;
+    background-color: map-get($blueColors, lightblueBG);
+    color: map-get($blueColors, blueBG);
 }
 
 .three{
     @extend .card;
     background-color: $yellowbg;
-    color: $blueBG;
+    color: map-get($blueColors, blueBG);
 }
 
 button{
@@ -178,7 +180,7 @@ button{
     
     border-radius: 20px;
     background-color: none;
-    color: $lightblueBG;
+    color: map-get($blueColors, lightblueBG);
     border: none;
     font-size: 18px;
     margin-top: 30px;
@@ -191,7 +193,7 @@ button{
 .contacts{
     height: auto;
     padding: 50px;
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
     margin-top: 50px;
     font-size: xx-large;
     color: white;
@@ -209,7 +211,7 @@ button{
     border: none;
     border-bottom: 1px solid white;
     color: white;
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
 }
 
 .big{
@@ -218,14 +220,14 @@ button{
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid white;
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
 }
 
 .large{
     height: 130px;
     width: 90%;
     margin-bottom: 10px;
-    background-color: $lightblueBG;
+    background-color: map-get($blueColors, lightblueBG);
     border: 1px solid white;
 }
 
@@ -234,11 +236,11 @@ button{
     width: 90%;
     background-color: rgb(233, 232, 232);
     border: none;
-    color: $blueBG;
+    color: map-get($blueColors, blueBG);
     font-size: 20px;
 
     &:hover{
-        background-color: $lightblueBG;
+        background-color: map-get($blueColors, lightblueBG);
         color: white;
     }
 }

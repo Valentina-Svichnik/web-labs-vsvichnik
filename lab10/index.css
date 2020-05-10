@@ -22,9 +22,11 @@ nav {
 
 a {
   text-decoration: none;
-  color: white; }
+  color: white;
+  padding: 10px; }
   a:hover {
     color: #f9ff9e;
+    background-color: #57b5eb;
     border-bottom: 1px solid #f9ff9e; }
 
 /* ******************** */
