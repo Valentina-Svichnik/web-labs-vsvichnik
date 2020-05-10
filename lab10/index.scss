@@ -1,0 +1,277 @@
+@import "variables";
+@import "mixins";
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    @include flex(space-around, center);
+    background-color: $lightblueBG;
+    height: 120px;
+
+    .logo{
+        flex: 1;
+    }
+
+    .menu{
+        @include flex(space-evenly, start);
+        flex: 1;
+        flex-wrap: wrap;
+    }
+
+    img{
+        margin-left: 50px;
+    }
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+        color: $yellowbg;
+        border-bottom: 1px solid $yellowbg;
+    }
+}
+
+
+/* ******************** */
+.container-preview{
+    background: url(img/start.jpg) no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    padding: 70px;
+    box-sizing: border-box;
+}    
+
+.sport{
+    width: 40%;
+    height: 85%;
+    opacity: 0.5;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    @include flex(space-around, start);
+    flex-direction: column;
+    text-align: center;
+
+    h1{
+        align-self: center;
+        font-size: xx-large;
+    }
+
+    p{
+        align-self: center;
+        font-size: 20px;
+    }
+}
+
+
+/* ****************************** */
+
+.container-about{
+    @include flex(center, start);
+    height: 600px;
+
+    img{
+        width: 40%;  
+        height: 400px;
+        align-self: center;
+    }
+}
+
+
+.block{
+    width: 40%;
+    text-align: center;
+    background-color: $lightblueBG;
+    color: white;
+    height: 400px;
+
+    box-sizing: border-box;
+    @include flex(center, start);
+    align-self: center;
+
+    article{
+        align-self: center;
+        width: 90%;
+        font-size: 20px;
+    }
+}
+
+
+/* ************************* */
+.container-three{
+    @include flex(center, center);
+    flex-direction: column;
+
+    h1{
+        color: $lightblueBG;
+        font-size: xx-large;
+    }
+
+    p{
+        color: $blueBG;
+        padding-bottom: 20px;    
+        font-size: 20px;
+    }
+}
+
+.cards{
+    @include flex(space-evenly, start);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: (100%/3 - 5%);
+    height: auto;
+
+    img{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.text{
+    @include flex(center, center);
+    flex-direction: column;
+    color: white;
+    padding-bottom: 50px;
+
+    article{
+        width: 85%;
+        text-align: center;
+        justify-content: space-around;
+    }
+}
+
+
+.one{
+    @extend .card;
+    background-color: $blueBG;
+
+    article{
+        color: $lightblueBG;
+    }
+}
+
+.two{
+    @extend .card;
+    background-color: $lightblueBG;
+    color: $blueBG;
+}
+
+.three{
+    @extend .card;
+    background-color: $yellowbg;
+    color: $blueBG;
+}
+
+button{
+    width: 40%;
+    height: 45px;
+    
+    border-radius: 20px;
+    background-color: none;
+    color: $lightblueBG;
+    border: none;
+    font-size: 18px;
+    margin-top: 30px;
+
+    &:hover{
+        background-color: white;
+    }
+}
+
+.contacts{
+    height: auto;
+    padding: 50px;
+    background-color: $lightblueBG;
+    margin-top: 50px;
+    font-size: xx-large;
+    color: white;
+}
+
+.form p{
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.small{
+    height: 30px;
+    width: 45%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    background-color: $lightblueBG;
+}
+
+.big{
+    height: 30px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: $lightblueBG;
+}
+
+.large{
+    height: 130px;
+    width: 90%;
+    margin-bottom: 10px;
+    background-color: $lightblueBG;
+    border: 1px solid white;
+}
+
+.btn{
+    height: 50px;
+    width: 90%;
+    background-color: rgb(233, 232, 232);
+    border: none;
+    color: $blueBG;
+    font-size: 20px;
+
+    &:hover{
+        background-color: $lightblueBG;
+        color: white;
+    }
+}
+
+input{
+    &:hover{
+        border: 1px solid white;
+    }    
+}
+
+
+footer{
+    height: 80px;
+    @include flex(center, flex-end);
+    background-color: #333232;
+    color: #a5a4a4;
+    width: 100%;
+}
+
+
+@media(max-width:300px){
+    nav{
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav img{
+        margin: 0;
+    }
+}
+
+@media(max-width: 800px){
+    .sport{
+        width: 100%;
+    }
+}
