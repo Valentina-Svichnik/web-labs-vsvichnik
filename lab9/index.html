@@ -58,11 +58,11 @@
                             тренировок. Хотите узнать, как сохранить бодрость и поддерживать себя в отличной форме? 
                             Свяжитесь с нами. При первой же возможности мы обязательно Вам ответим!
                         </article>
-                        <button type="button" class="one">Узнать подробнее</button>
+                        <button type="button" class="one" tabindex="8">Узнать подробнее</button>
                     </div>
                 </div>
 
-                <div class="card two" tabindex="8">
+                <div class="card two" tabindex="9">
                     <img src="img/fitness.jpg" alt="fitness">
                     <div class="text">
                         <h2>СПОРТИВНЫЙ ЗАЛ</h2>
@@ -74,11 +74,11 @@
                             предложить. Но Зона свободных весов — предмет нашей особой гордости. Посетите наш центр и узнайте, 
                             чем еще мы можем вас заинтересовать.
                         </article>
-                        <button type="button" class="two">Узнать подробнее</button>
+                        <button type="button" class="two" tabindex="10">Узнать подробнее</button>
                     </div>
                 </div>
 
-                <div class="card three" tabindex="9"> 
+                <div class="card three" tabindex="11"> 
                     <img src="img/swimming.jpg" alt="yoga">
                     <div class="text">
                         <h2>БАССЕЙН</h2>
@@ -89,30 +89,31 @@
                             просто замечательно. В этом вам поможет Бассейн олимпийского размера, но главный ингредиент успеха — 
                             ваше участие. Мы всего лишь создали комфортные условия. Приходите к нам и откройте для себя радость движения.
                         </article>
-                        <button type="button" class="three">Узнать подробнее</button>
+                        <button type="button" class="three" tabindex="12">Узнать подробнее</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <aside tabindex="10" role="complementary">
+    <aside tabindex="13" role="complementary">
         <div class="contacts">
             <h1>СВЯЖИТЕСЬ С НАМИ</h1>
             <div class="form">
-                <p>Имя</p>
-                <input type="text" class="small" placeholder="Имя" tabindex="11">
-                <p>Почта</p>
-                <input type="email" class="small" placeholder="Почта" tabindex="12">
-                <p>Тема вопроса</p>
-                <input type="text" class="big" placeholder="Тема" tabindex="13"> <br>
-                <input type="text" class="large" placeholder="Добавьте сообщение..."> <br>
-                <input type="submit" value="Отправить" class="btn">
+                <label for="name">Имя</label><br>
+                <input type="text" id="name" class="small" tabindex="14"><br>
+                <label for="email">Почта</label><br>
+                <input type="email" id="email" class="small" tabindex="15"><br>
+                <label for="tema">Тема вопроса</label><br>
+                <input type="text" id="tema" class="big" tabindex="16"> <br> <br>
+                <label for="message">Добавьте сообщение</label>
+                <input type="text" id="message" class="large"  tabindex="17"> <br>
+                <input type="submit" value="Отправить" class="btn" tabindex="18">
             </div>
         </div>
     </aside>
 
-    <footer role="contentinfo" tabindex="14">
+    <footer role="contentinfo" tabindex="19">
         <p>2020, Let's fly!</p>		
     </footer>
 </body>
