@@ -8,7 +8,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #6ebfee;
+    background-color: #325a72;
     height: 120px;
 }
 
@@ -85,9 +85,8 @@ nav a:hover{
 
 .block{
     width: 40%;
-    /* padding: 50px; */
     text-align: center;
-    background-color: #6ebfee;
+    background-color: #325a72;
     color: white;
     height: 400px;
 
