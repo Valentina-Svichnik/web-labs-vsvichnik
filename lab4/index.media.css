@@ -1,3 +1,28 @@
+@media (max-width: 3000px){
+    .container21, .container22, .container23{
+        padding: 20px 50px;
+        background-size: cover;
+    }
+
+    .container15{
+        background-size: cover;
+    }
+
+    .cont1{
+        justify-content: space-evenly;
+    }
+
+    .element{
+        align-items: center;
+    }
+
+    .pic{
+        background-size: cover;
+    }
+
+    
+}
+
 @media (max-width: 1190px){
     .container{
         flex-direction: column;

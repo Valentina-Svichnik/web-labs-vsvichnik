@@ -51,7 +51,8 @@ h3, h4{
 }
 
 .element a:hover{
-    font-size: 17px;
+    font-size: 15px;
+    border-bottom: 1px solid #000;
 }
 
 .pic{
@@ -235,8 +236,11 @@ h3, h4{
      text-decoration: none;
  }
 
- .cont121 h4:hover{
+
+ .orangeHover:hover{
     color: #FF7931;
+    transition-duration: .2s;
+    transition-delay: .2s;
  }
 
  .container12 p{
@@ -282,10 +286,6 @@ h3, h4{
     line-height: 150%;
 }
 
-
-.container131 h2:hover{
-    color: #FF7931;
-}
 
 .container14{
     width: 100%;
@@ -352,7 +352,50 @@ h3, h4{
     background: url(img/bigbird.png) no-repeat;
 
     color: white;
-    
+ }
+
+ .numbers{
+     display: flex;
+     height: 40px;
+     justify-content: center;
+     align-items: center;
+     margin: 10px 0;
+     width: 100%;
+ }
+
+ .arw{
+     padding:0 30px;
+ }
+
+ .line{
+     height: 40px;
+     width: 0.5px;
+     background-color: rgb(156, 156, 156);
+ }
+
+ .nmbr{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+ }
+
+.boxx{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ .numbers a{
+     text-decoration: none;
+     color: rgb(156, 156, 156);
+     font-family: 'Raleway', Helvetica, sans-serif;
+ }
+
+ .numbers a p:hover{
+     color: #000;
+     font-weight: bold;
+     border-bottom: 2px solid #FF7931
  }
 
  .button{
@@ -372,6 +415,8 @@ h3, h4{
  .button:hover{
      background-color: #FF7931;
      opacity: 1;
+     transition-duration: .5s;
+     transition-delay: .2s;
  }
 
  .button a{
@@ -386,9 +431,10 @@ h3, h4{
  }
 
 .glide .button{
-    border: 2px solid white;
+    border: 1px solid white;
     opacity: 0;
     text-align: center;
+    background-color: none;
 }
 
 .glide p{
@@ -429,12 +475,11 @@ h3, h4{
     background: url(img/watch.png) no-repeat;
 }
 
-/* .slider p:hover{
-    opacity: 1;
-} */
 .slider:hover .button{
     opacity: 1;
-    background-color: rgb(95, 93, 93);
+    background-color: none;
+    transition-duration: .5s;
+     transition-delay: .2s;
 }
 
 .slider:hover .text{
@@ -443,10 +488,35 @@ h3, h4{
 
 .slider:hover{
     width: 270px;
-    height: 136px;  
+    height: 120px;  
+    transition-duration: .5s;
+    transition-delay: .2s;
 }
 
+.clicks{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.boxxx{
+    display: flex;
+}
+
+.boxxx img{
+    align-self: center;
+}
+
+.boxL{
+    display: flex;
+}
+
+.lineg{
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+    align-self: center;
+}
 
  footer{
     background: #F7F7F7;
