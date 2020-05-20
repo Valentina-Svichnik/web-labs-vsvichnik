@@ -34,6 +34,10 @@ h3, h4{
     line-height: 19px;
 }
 
+.submenu{
+    margin-bottom: 20px;
+}
+
 .element a{
     font-family: 'Raleway', sans-serif;
     font-style: normal;
@@ -64,7 +68,6 @@ h3, h4{
     justify-content: space-around;
     padding: 40px;
     align-items: center;
-    /* background-size: cover; */
     background-position: 50% 50%
 }
 
