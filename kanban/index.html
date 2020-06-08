@@ -127,7 +127,7 @@
             <p class = "another__color edit__font">{{ item.name }}</p>
             <div class = "sub__menu trans" v-bind:class = "{ 'dark-sub__menu': darkTheme }">
               <button @click = "edit_app_block(index)" v-bind:class = "{ 'dark__button': darkTheme }"> <img src="./img/edit.png" alt="edit task" width="28"> </button>
-              <button @click = "delete(index)" v-bind:class = "{ 'dark__button': darkTheme }"> <img src="./img/cross.png" alt="cancel" width="28"> </button>
+              <button v-on:click = "delete_app_block(index)" v-bind:class = "{ 'dark__button': darkTheme }"> <img src="./img/cross.png" alt="cancel" width="28"> </button>
             </div>
           </li>
         </ul>

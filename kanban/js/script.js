@@ -186,7 +186,7 @@ new Vue({
       return {years: years, months: months, days: days,
               hours: hours, minutes: minutes, seconds: seconds};
     },
-    delete: function(index){
+    delete_app_block: function(index){
       for(let i = 0; i < this.plan.length; i++){
         if(this.plan[i]["title"].includes(index + 1)){
           for(let j = i + 1; j < this.plan.length; j++){
