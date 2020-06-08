@@ -130,17 +130,21 @@ new Vue({
     },
     ready_button: function(index){
       for(let i = 0; i < this.plan.length; i++){
+        let p = 0
         if(this.plan[i]["id"].includes(index + 1)){
           if(this.plan[i]["tag"] == "plan"){
             this.plan[i]["tag"] = 'in-work'
-            if(this.plan[i]["time"] == ""){
+            if(this.plan[i]["time"] == "" && p == 0){
               this.plan[i]["time"] = new Date().toLocaleString();
               this.plan[i]["data"] = new Date();
             }
           }
           else if(this.plan[i]["tag"] == 'in-work'){
             this.plan[i]["tag"] = 'ended'
-            if(this.plan[i]["time_of_work"] == ""){
+            if (this.plan[i]["time"] == ''){
+              this.plan[i]["time"] = new Date().toLocaleString();
+              this.plan[i]["data"] = new Date();
+            }
               var diff = this.dateDiff(this.plan[i]["data"], new Date())
               this.plan[i]["time_of_work"] = diff.years+' лет, '+
               diff.months+' месяцев, '+
@@ -149,7 +153,7 @@ new Vue({
               diff.minutes+' минут, '+
               diff.seconds+' секунд'
             }
-          }
+          if (diff.years == 0 &&  diff.months == 0 && diff.hours == 0 && diff.minutes == 0 && diff.seconds == 0) p = 0; else p = 1
           this.counter()
         }
       }
