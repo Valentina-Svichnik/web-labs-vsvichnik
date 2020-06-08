@@ -221,11 +221,16 @@ new Vue({
       const itemID = evt.dataTransfer.getData('itemID')
       const item = this.plan.find(item => item.id == itemID)
       item.tag = list
-      if(item.tag == "in-work" && item.time == ""){
+      let p = 0
+      if(item.tag == "in-work" && item.time == "" && p == 0){
         item.time = new Date().toLocaleString()
         item.data = new Date()
       }
-      else if(item.tag == "ended" && item.time_of_work == ""){
+      else if(item.tag == "ended"){
+        if (item.time == '') {
+          item.time = new Date().toLocaleString()
+          item.data = new Date()
+        }
         var diff = this.dateDiff(item.data, new Date())
         item.time_of_work = diff.years+' лет, '+
         diff.months+' месяцев, '+
@@ -234,6 +239,7 @@ new Vue({
         diff.minutes+' минут, '+
         diff.seconds+' секунд'
       }
+      if (diff.years == 0 &&  diff.months == 0 && diff.hours == 0 && diff.minutes == 0 && diff.seconds == 0) p = 0; else p = 1
       this.counter()
     }
   }
