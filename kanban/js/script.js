@@ -21,7 +21,8 @@ new Vue({
     selected_id: 0,
     check_box: 0,
     schedule: [0, 0, 0],
-    plan: plan
+    plan: plan,
+    dif_id: 0
   },
 
   methods: {
@@ -49,7 +50,8 @@ new Vue({
     checkName: function(name){
       if(name != "" || name != " "){
         this.num++
-        this.plan.push(objects('Задание ' + this.num, this.search, "", "", this.userName, "plan"))
+        this.dif_id++
+        this.plan.push(objects('Задание ' + this.num, this.search, "", "", this.userName, "plan", "", 'Задание ' + this.dif_id))
         this.status = ''
         this.name = ''
         this.start = ''
@@ -82,7 +84,7 @@ new Vue({
       }
       else if((status == 'plan' || status == 'in-work' || status == 'ended') && this.editable == true){
                 for(let i = 0; i < this.plan.length; i++){
-                  if(this.plan[i]["title"].includes(this.selected_id)){
+                  if(this.plan[i]["id"].includes(this.selected_id)){
                     this.plan[i]["description"] = this.search
                     this.plan[i]["time"] = this.start
                     this.plan[i]["time_of_work"] = this.end
@@ -99,7 +101,7 @@ new Vue({
     },
     edit_app_block: function(index){
       for(let i = 0; i < this.plan.length; i++){
-        if(this.plan[i]["title"].includes(index + 1)){
+        if(this.plan[i]["id"].includes(index + 1)){
           if(this.plan[i]["tag"] == "plan"){
             this.boolevo[0] = true
             this.boolevo[1] = true
@@ -128,7 +130,7 @@ new Vue({
     },
     ready_button: function(index){
       for(let i = 0; i < this.plan.length; i++){
-        if(this.plan[i]["title"].includes(index + 1)){
+        if(this.plan[i]["id"].includes(index + 1)){
           if(this.plan[i]["tag"] == "plan"){
             this.plan[i]["tag"] = 'in-work'
             if(this.plan[i]["time"] == ""){
@@ -188,12 +190,12 @@ new Vue({
     },
     delete_app_block: function(index){
       for(let i = 0; i < this.plan.length; i++){
-        if(this.plan[i]["title"].includes(index + 1)){
+        if(this.plan[i]["id"].includes(index + 1)){
           for(let j = i + 1; j < this.plan.length; j++){
-            this.plan[j]["title"] = 'Задание ' + (this.plan[j]["title"].split(" ")[1] - 1)
+            this.plan[j]["id"] = 'Задание ' + (this.plan[j]["id"].split(" ")[1] - 1)
           }
           this.plan.splice(i, 1)
-          this.num--
+          this.dif_id--
           this.counter()
           console.log(this.plan.toString())
         }
@@ -212,12 +214,12 @@ new Vue({
     startDrag: function(evt, item) {
       evt.dataTransfer.dropEffect = 'move'
       evt.dataTransfer.effectAllowed = 'move'
-      evt.dataTransfer.setData('itemID', item.title)
+      evt.dataTransfer.setData('itemID', item.id)
       this.counter()
     },
     onDrop: function (evt, list) {
       const itemID = evt.dataTransfer.getData('itemID')
-      const item = this.plan.find(item => item.title == itemID)
+      const item = this.plan.find(item => item.id == itemID)
       item.tag = list
       if(item.tag == "in-work" && item.time == ""){
         item.time = new Date().toLocaleString()
@@ -237,8 +239,8 @@ new Vue({
   }
 })
 
-function objects(title, description, time, time_of_work, name, tag, data){
+function objects(title, description, time, time_of_work, name, tag, data, id){
   return{
-    title, description, time, time_of_work, name, tag, data
+    title, description, time, time_of_work, name, tag, data, id
   }
 }
