@@ -2,6 +2,7 @@ const plan = []
 
 new Vue({
   el: "#app",
+
   data: {
     windowVisibility: false,
     person: false, 
@@ -10,36 +11,55 @@ new Vue({
     search: '',
     description: '',
     status: '',
-    sponsor: '',
+    name: '',
     start: '',
     end: '',
-    // title: 'Vue.JS Task Manager',
     editable: false,
-    uuid: 0,
-    darkIsEnabled: false,
+    num: 0,
+    darkTheme: false,
     darkText: true,
-    theme_naming: ["Light theme", "Dark theme"],
     selected_id: 0,
     check_box: 0,
     schedule: [0, 0, 0],
     plan: plan
   },
+
   methods: {
-    checkFull: function(name){
+    counter: function(){
+      let plans = 0
+      let works = 0
+      let done = 0
+      for(let i = 0; i < this.plan.length; i++){
+        if(this.plan[i]['tag'] == "plan"){
+          plans++
+        }
+        else if(this.plan[i]['tag'] == "in-work"){
+          works++
+        }
+        else if(this.plan[i]['tag'] == "ended"){
+          done++
+        }
+      }
+      this.schedule[0] = plans
+      this.schedule[1] = works
+      this.schedule[2] = done
+      console.log(this.schedule)
+    },
+
+    checkName: function(name){
       if(name != "" || name != " "){
-        this.uuid++
-        this.plan.push(objects('Задание ' + this.uuid, this.search, "", "", this.userName, "plan"))
+        this.num++
+        this.plan.push(objects('Задание ' + this.num, this.search, "", "", this.userName, "plan"))
         this.status = ''
-        this.sponsor = ''
+        this.name = ''
         this.start = ''
         this.end = ''
-        this.shell()
+        this.counter()
         this.person = !this.person
       }
     },
     checkTextInInput: function(search){
       if(search != '' || search != " "){
-        // this.windowVisibility = !this.windowVisibility
         this.search = search
         this.person = !this.person
       }
@@ -48,17 +68,17 @@ new Vue({
       this.search =  '',
       this.description = '',
       this.status = '',
-      this.sponsor = '',
+      this.name = '',
       this.start = '',
       this.end = ''
     },
-    add_data_to_array: function(desc, status, sponsor, start, end){
+    add_data_to_array: function(desc, status, name, start, end){
       if((status == 'plan' || status == 'in-work' || status == 'ended') && this.editable == false){
           this.uuid++
-          this.plan.push(objects('Задание ' + this.uuid, desc, start, end, this.userName, status, ""))
+          this.plan.push(objects('Задание ' + this.num, desc, start, end, this.userName, status, ""))
           this.reset_input()
           this.windowVisibility = !this.windowVisibility
-          this.shell()
+          this.counter()
       }
       else if((status == 'plan' || status == 'in-work' || status == 'ended') && this.editable == true){
                 for(let i = 0; i < this.plan.length; i++){
@@ -66,7 +86,7 @@ new Vue({
                     this.plan[i]["description"] = this.search
                     this.plan[i]["time"] = this.start
                     this.plan[i]["time_of_work"] = this.end
-                    this.plan[i]["name"] = this.sponsor
+                    this.plan[i]["name"] = this.name
                     this.plan[i]["tag"] = this.status
                   }
                 }
@@ -74,7 +94,7 @@ new Vue({
                 this.reset_input()
                 this.selected_id = 0
                 this.editable = false
-                this.shell()
+                this.counter()
       }
     },
     edit_app_block: function(index){
@@ -97,7 +117,7 @@ new Vue({
           }
           this.search =  this.plan[i]["description"],
           this.status = this.plan[i]["tag"],
-          this.sponsor = this.plan[i]["name"],
+          this.name = this.plan[i]["name"],
           this.start = this.plan[i]["time"],
           this.end = this.plan[i]["time_of_work"]
           this.editable = true
@@ -128,7 +148,7 @@ new Vue({
               diff.seconds+' секунд'
             }
           }
-          this.shell()
+          this.counter()
         }
       }
     },
@@ -166,15 +186,15 @@ new Vue({
       return {years: years, months: months, days: days,
               hours: hours, minutes: minutes, seconds: seconds};
     },
-    delete_app_block: function(index){
+    delete: function(index){
       for(let i = 0; i < this.plan.length; i++){
         if(this.plan[i]["title"].includes(index + 1)){
           for(let j = i + 1; j < this.plan.length; j++){
             this.plan[j]["title"] = 'Задание ' + (this.plan[j]["title"].split(" ")[1] - 1)
           }
           this.plan.splice(i, 1)
-          this.uuid--
-          this.shell()
+          this.num--
+          this.counter()
           console.log(this.plan.toString())
         }
       }
@@ -182,37 +202,18 @@ new Vue({
     change_theme: function(){
       this.check_box = !this.check_box
       if(this.check_box == 1){
-        this.darkIsEnabled = true
+        this.darkTheme = true
       }
       else{
-        this.darkIsEnabled = false
+        this.darkTheme = false
       }
     },
-    shell: function(){
-      let plans = 0
-      let works = 0
-      let done = 0
-      for(let i = 0; i < this.plan.length; i++){
-        if(this.plan[i]['tag'] == "plan"){
-          plans++
-        }
-        else if(this.plan[i]['tag'] == "in-work"){
-          works++
-        }
-        else if(this.plan[i]['tag'] == "ended"){
-          done++
-        }
-      }
-      this.schedule[0] = plans
-      this.schedule[1] = works
-      this.schedule[2] = done
-      console.log(this.schedule)
-    },
+    
     startDrag: function(evt, item) {
       evt.dataTransfer.dropEffect = 'move'
       evt.dataTransfer.effectAllowed = 'move'
       evt.dataTransfer.setData('itemID', item.title)
-      this.shell()
+      this.counter()
     },
     onDrop: function (evt, list) {
       const itemID = evt.dataTransfer.getData('itemID')
@@ -231,7 +232,7 @@ new Vue({
         diff.minutes+' минут, '+
         diff.seconds+' секунд'
       }
-      this.shell()
+      this.counter()
     }
   }
 })

@@ -2,4 +2,24 @@
   .outline__block{
     margin-top: 25px;
   }
+
+  main{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cards{
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  header{
+    flex-direction: column;
+  }
+
+  .switch{
+    margin-top: 20px;
+    align-self: center;
+  }
 }
