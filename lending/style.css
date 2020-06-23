@@ -1,0 +1,25 @@
+html, body {
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+.bg-flowers{
+    background-image: url(img/fon_flowers.png);
+    height: 500px;
+}
+
+.bg-gradient{
+    background: linear-gradient(0deg, white, #FDECEF, white);
+    height: auto;
+}
+
+.row__pink {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 30px;
+    left: 190px;
+    background-color: #FDECEF;
+    z-index: 1; }
+  
+  .img-about {
+    z-index: 10; }
